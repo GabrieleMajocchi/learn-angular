@@ -1,0 +1,15 @@
+
+-Creare un nuovo progetto con Angular
+    ng new nomeProgetto
+    ng new nomeProgetto --no-standalone               <-- Da angular 17 i progetti sono standalone di default quindi per usare i Module dobbiamo usare questo comando
+
+-Nel caso si usasse una repo già inizializzata presa di github installare i vari pacchetti
+    npm install
+
+-Se non fossimo già nella cartella dal terminale
+    cd nome-cartella
+
+-Startiamo il server (--open apre direttamente la pagina sul browser)
+    ng serve --open
+
+-
