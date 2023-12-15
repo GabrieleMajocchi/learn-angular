@@ -10,7 +10,9 @@
     cd nome-cartella
 
 -Creiamo la parte di environments che dalla versione 15 di Angular non c'è più
+
     ng generate environments
+
     -Di conseguenza dobbiamo aggiornare angular.json andando a modificare dentro build sotto "development" (possibile riga 58)
     Copiamo tutta la parte di "Development" e andiamo a incollarla subito sotto cambiando nome in staging e percorso del "with"
     in environment.staging.ts. Il risultato dovrebbe essere il seguente:
@@ -26,9 +28,25 @@
               ]
             }
     -Creiamo una copia del file environment.development.ts e lo rinominiamo environment.staging.ts
+
     -Creiamo un nuovo comando usabile che sarà staging dentro il nostro package.json. Inseriamo sotto "watch" (riga 8) il nuovo comando
     "staging" che si riferirà allo staging configuration. Il codice da aggiungere è il seguente:
-        "staging": "ng build --watch --configuration staging",
+        "staging": "ng build --watch --configuration staging"
+
+    -Nei file dell'environment mettiamo production:false o true per far andare in produzione o restare in test
+    Il codice dovrebbe essere:
+        export const environment = {
+            production: false
+        };
+
+    -Aggiorniamo il main.ts importando la ProdMode e l'environment aggiungendo il seguente codice:
+        import { enableProdMode } from '@angular/core';
+
+        import { environment } from './environments/environment';
+
+        if (environment.production) {
+        enableProdMode();
+        }
 
 -Startiamo il server (--open apre direttamente la pagina sul browser)
     ng serve --open
