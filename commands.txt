@@ -50,4 +50,6 @@
 
 -Startiamo il server (--open apre direttamente la pagina sul browser)
     ng serve --open
+-Possiamo fare la stessa cosa con
+    npm run start (oppure per usare le altre opzioni del package.json possiamo fare watch oppure staging)
 
