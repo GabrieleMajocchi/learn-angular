@@ -9,7 +9,27 @@
 -Se non fossimo già nella cartella dal terminale
     cd nome-cartella
 
+-Creiamo la parte di environments che dalla versione 15 di Angular non c'è più
+    ng generate environments
+    -Di conseguenza dobbiamo aggiornare angular.json andando a modificare dentro build sotto "development" (possibile riga 58)
+    Copiamo tutta la parte di "Development" e andiamo a incollarla subito sotto cambiando nome in staging e percorso del "with"
+    in environment.staging.ts. Il risultato dovrebbe essere il seguente:
+        "staging": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ]
+            }
+    -Creiamo una copia del file environment.development.ts e lo rinominiamo environment.staging.ts
+    -Creiamo un nuovo comando usabile che sarà staging dentro il nostro package.json. Inseriamo sotto "watch" (riga 8) il nuovo comando
+    "staging" che si riferirà allo staging configuration. Il codice da aggiungere è il seguente:
+        "staging": "ng build --watch --configuration staging",
+
 -Startiamo il server (--open apre direttamente la pagina sul browser)
     ng serve --open
 
--
