@@ -53,3 +53,6 @@
 -Possiamo fare la stessa cosa con
     npm run start (oppure per usare le altre opzioni del package.json possiamo fare watch oppure staging)
 
+-Creazione nuovo componente
+    ng generate component nomeComponente    (short ng g c nomeComponente)
+    
