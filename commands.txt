@@ -56,3 +56,19 @@
 -Creazione nuovo componente (si può fare anche a mano creando i singoli file)
     ng generate component nomeComponente    (short ng g c nomeComponente)
 
+-Installazione di Angular material
+    ng add @angular/material
+
+    Fatto l'install importiamo i componenti che ci servono in app.module.ts ad esempio per lo slide:
+        import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
+        @NgModule ({
+        imports: [
+            MatSlideToggleModule,
+        ]
+        })
+
+    Tutti i componenti li trovo qui: https://material.angular.io/components/categories
+
+
+
