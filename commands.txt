@@ -77,6 +77,10 @@
 
 -Direttive strutturali (modificano la struttura del dom) *ngIf, *ngFor.
     Contraddistinte dal * davanti
+
     *ngIf va a non creare proprio la parte di codice nel caso fosse folse
+    utilizzabile con then e else per rendere più leggibile/capibile il codice
+
+    *ngFor utilizzato per creare più elementi in maniera dinamica
 
 -<ng-template> tag che vede solo angular ma non conta nel dom

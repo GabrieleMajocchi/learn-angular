@@ -1,6 +1,7 @@
 <!-- <p>prova works!</p> -->
 <!-- <mat-slide-toggle>Toggle me!</mat-slide-toggle> -->
 
+
 <!-- --String interpolation-- -->
 <!-- <mat-card class="example-card">
   <mat-card-header>
@@ -16,6 +17,7 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card> -->
+
 
 <!-- --Property binding-- -->
 <!-- <button mat-raised-button color="primary" [disabled]="isDisabled">Primary</button>
@@ -40,6 +42,7 @@
   </mat-card-actions>
 </mat-card> -->
 
+
 <!-- --Event binding-- -->
 <!-- <button mat-raised-button color="primary" (click)="logClick(this)">Primary</button> -->
 
@@ -47,6 +50,7 @@
   <mat-label>Favorite food</mat-label>
   <input matInput placeholder="Ex. Pizza" (input)="onInput($event)">
 </mat-form-field> -->
+
 
 <!-- --2 Ways Binding-- -->
 <!-- <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
@@ -56,23 +60,31 @@
 </mat-form-field>
 <p>{{title}}</p> -->
 
+
 <!-- --Test direttiva *ngIf-- -->
-<p *ngIf="isVisible">Test ngIf 1</p>
-<p *ngIf="isVisible2">Test ngIf 2</p>
+<!-- <p *ngIf="isVisible">Test ngIf 1</p>
+<p *ngIf="isVisible2">Test ngIf 2</p> -->
 
 <!-- --Se l'ngIf è false viene mostrato l'else ovvero bloccoElse che viene dato a ng-template con # -->
 <!-- L'else è utilizzabile solo su ng-template e non su tag normali-- -->
-<p *ngIf="isVisible2; else bloccoElse">Sono visibile</p>
+<!-- <p *ngIf="isVisible2; else bloccoElse">Sono visibile</p>
 <ng-template #bloccoElse>
   <p>non sono visible</p>
-</ng-template>
+</ng-template> -->
 
 <!-- --Opzione con then là dove fosse vero l'if-- -->
-<ng-template *ngIf="isVisible; then bloccoIf else bloccoElse"></ng-template>
+<!-- <ng-template *ngIf="isVisible; then bloccoIf else bloccoElse"></ng-template>
 <ng-template #bloccoIf>
   <p>Sono visibile</p>
 </ng-template>
 <ng-template #bloccoElse>
   <p>Non sono visible</p>
-</ng-template>
+</ng-template> -->
 
+
+<!-- --Direttiva *ngFor-- -->
+<ul>
+  <li *ngFor="let persona of persone">
+    {{persona.nome}} - {{persona.cognome}}
+  </li>
+</ul>

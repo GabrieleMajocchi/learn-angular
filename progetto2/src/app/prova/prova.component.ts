@@ -24,6 +24,14 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
   // --Variabili per ngIf--
   isVisible = true
   isVisible2 = false
+  // --array per ngFor--
+  persone = [
+    {nome: "Gino", cognome: "Paoli"},
+    {nome: "Marco", cognome: "Rossi"},
+    {nome: "Maria", cognome: "Neri"},
+  ]
+
+
   // --Funzione da associare all'event binding (click)--
   logClick(e: any){
     console.log(e)
