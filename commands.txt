@@ -73,3 +73,4 @@
 
 -Per fare il property binding (Es. : su vue) si usano le []
 
+-Event binding mettendo le () ad esempio (click)="azione da fare"

@@ -20,6 +20,11 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
   img1 = 'https://statickodami.akamaized.net/wp-content/uploads/sites/31/2021/08/iStock-1267935446.jpg?im=AspectCrop=(16,9);'
   img2 = 'https://material.angular.io/assets/img/examples/shiba2.jpg'
 
+  // --Funzione da associare all'event binding (click)--
+  logClick(){
+    console.log('componente cliccato')
+  }
+
   constructor() {
     console.log("costruttore")
   }
