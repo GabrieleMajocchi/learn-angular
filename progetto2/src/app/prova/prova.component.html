@@ -1,7 +1,8 @@
 <!-- <p>prova works!</p> -->
 <!-- <mat-slide-toggle>Toggle me!</mat-slide-toggle> -->
 
-<mat-card class="example-card">
+<!-- --String interpolation-- -->
+<!-- <mat-card class="example-card">
   <mat-card-header>
     <mat-card-title>{{ cani[0].nome.toUpperCase() }}</mat-card-title>
     <mat-card-subtitle>{{ cani[0].razza }}</mat-card-subtitle>
@@ -14,4 +15,7 @@
     <button mat-button>LIKE</button>
     <button mat-button>SHARE</button>
   </mat-card-actions>
-</mat-card>
+</mat-card> -->
+
+<!-- --Property binding-- -->
+<button mat-raised-button color="primary" [disabled]="isDisabled">Primary</button>

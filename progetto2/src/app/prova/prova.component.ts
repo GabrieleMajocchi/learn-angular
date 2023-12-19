@@ -15,11 +15,17 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
   originally bred for hunting.`}
   ]
 
+  isDisabled = false
+
   constructor() {
     console.log("costruttore")
   }
   ngOnInit(): void {
     console.log("ngOnInit")
+    // --Ogni 2 secondi cambia isDisabled--
+    setInterval(()=>{
+      this.isDisabled = !this.isDisabled
+    }, 2000)
   }
   ngDoCheck(): void {
     console.log("ngDoCheck")
