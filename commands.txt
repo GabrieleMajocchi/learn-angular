@@ -104,3 +104,12 @@
     [ngClass]="{'cerchioOnline' : persona.isOnline, 'cerchioOffline' : !persona.isOnline, 'check' : persona.controllo == 'attivo'}"
     Col ternario si può inserire solo 1 opzione
     [ngClass]="{'background': persona.isOnline ? 'cerchioOnline' : 'cerchioOffline'}"
+
+-Passaggio di dati dal componente parent al child (prop di Vue)
+    Nel parent andiamo a scrivere sul componente child i dati da passare con nome e nome dell'elemento da passare
+        [data]="shareData"
+    Aggiungiamo l'import al child con 
+        import {Input} from '@angular/core';
+    E inseriamo dentro l'export 
+        @Input() data: any;
+    Non resta che richiamare i dati ricevuti nel child, in questo caso avremo l'array di oggetti dentro data

@@ -10,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'progetto2';
+
+  shareData = [
+    {nome: "Gino", cognome: "Paoli", isOnline: true},
+    {nome: "Marco", cognome: "Rossi", isOnline: false},
+    {nome: "Maria", cognome: "Neri", isOnline: true},
+  ]
 }
