@@ -82,5 +82,12 @@
     utilizzabile con then e else per rendere più leggibile/capibile il codice
 
     *ngFor utilizzato per creare più elementi in maniera dinamica
+    con ngFor possiamo usare (as etc.. si può mettere quello che si vuole):
+        -index as i
+        -count as c
+        -first as isFirst
+        -last as isLast
+        -even as isEven
+        -odd as isOdd
 
 -<ng-template> tag che vede solo angular ma non conta nel dom
