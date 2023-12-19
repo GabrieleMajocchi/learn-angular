@@ -31,6 +31,9 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
     {nome: "Maria", cognome: "Neri"},
   ]
 
+  // --Variabile per ngSwitch--
+  numeroSwitch = 3
+  testoSwitch = 'due'
 
   // --Funzione da associare all'event binding (click)--
   logClick(e: any){

@@ -83,8 +83,26 @@
 
 
 <!-- --Direttiva *ngFor-- -->
-<ul>
+<!-- <ul>
   <li *ngFor="let persona of persone; index as i">
     Utente n° {{i}}: {{persona.nome}} - {{persona.cognome}}
   </li>
-</ul>
+</ul> -->
+
+<!-- --Esempio ngSwitch-- -->
+<div [ngSwitch]="numeroSwitch">
+  <p *ngSwitchCase="1">uno</p>
+  <p *ngSwitchCase="2">due</p>
+  <p *ngSwitchCase="3">tre</p>
+  <p *ngSwitchCase="4">quattro</p>
+  <p *ngSwitchDefault>default</p>
+</div>
+
+<div [ngSwitch]="testoSwitch">
+  <p *ngSwitchCase="'uno'">uno</p>
+  <p *ngSwitchCase="'due'">due</p>
+  <p *ngSwitchCase="'tre'">tre</p>
+  <p *ngSwitchCase="'quattro'">quattro</p>
+  <p *ngSwitchDefault>default</p>
+</div>
+
