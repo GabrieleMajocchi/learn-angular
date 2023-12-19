@@ -26,8 +26,10 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
   }
 
   // --Funzione chiamata dall'input--
-  onInput(e: any){
-    console.log(e)
+  onInput(event: Event){
+    // --Facciamo il casting dicendo che il target dell'evento è un elemento di input HTML--
+    // --Serve dato che abbiamo dichiarato event: Event quindi non andiamo più a prendere any ma solo un determinato tipo--
+    console.log( (<HTMLInputElement>event.target).value)
   }
 
   constructor() {
