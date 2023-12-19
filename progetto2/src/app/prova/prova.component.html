@@ -18,7 +18,7 @@
 </mat-card> -->
 
 <!-- --Property binding-- -->
-<button mat-raised-button color="primary" [disabled]="isDisabled" (click)="logClick(this)">Primary</button>
+<!-- <button mat-raised-button color="primary" [disabled]="isDisabled">Primary</button>
 
 <mat-card class="example-card">
   <mat-card-header>
@@ -38,4 +38,12 @@
     <button mat-button>LIKE</button>
     <button mat-button>SHARE</button>
   </mat-card-actions>
-</mat-card>
+</mat-card> -->
+
+<!-- --Event binding-- -->
+<!-- <button mat-raised-button color="primary" (click)="logClick(this)">Primary</button> -->
+
+<mat-form-field class="example-full-width">
+  <mat-label>Favorite food</mat-label>
+  <input matInput placeholder="Ex. Pizza" (input)="onInput($event)">
+</mat-form-field>

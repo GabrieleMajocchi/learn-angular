@@ -25,6 +25,11 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
     console.log(e)
   }
 
+  // --Funzione chiamata dall'input--
+  onInput(e: any){
+    console.log(e)
+  }
+
   constructor() {
     console.log("costruttore")
   }
