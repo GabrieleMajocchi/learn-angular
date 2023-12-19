@@ -66,3 +66,13 @@
 <ng-template #bloccoElse>
   <p>non sono visible</p>
 </ng-template>
+
+<!-- --Opzione con then là dove fosse vero l'if-- -->
+<ng-template *ngIf="isVisible; then bloccoIf else bloccoElse"></ng-template>
+<ng-template #bloccoIf>
+  <p>Sono visibile</p>
+</ng-template>
+<ng-template #bloccoElse>
+  <p>Non sono visible</p>
+</ng-template>
+
