@@ -69,6 +69,7 @@
         })
 
     Tutti i componenti li trovo qui: https://material.angular.io/components/categories
+    Dato che se ne usano svariati se ne usiamo tanti conviene fare un modulo solo per Angular Material per importare tutto
 
 
 
