@@ -59,3 +59,10 @@
 <!-- --Test direttiva *ngIf-- -->
 <p *ngIf="isVisible">Test ngIf 1</p>
 <p *ngIf="isVisible2">Test ngIf 2</p>
+
+<!-- --Se l'ngIf è false viene mostrato l'else ovvero bloccoElse che viene dato a ng-template con # -->
+<!-- L'else è utilizzabile solo su ng-template e non su tag normali-- -->
+<p *ngIf="isVisible2; else bloccoElse">Sono visibile</p>
+<ng-template #bloccoElse>
+  <p>non sono visible</p>
+</ng-template>
