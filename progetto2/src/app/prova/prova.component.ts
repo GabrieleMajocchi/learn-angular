@@ -20,6 +20,7 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
   img1 = 'https://statickodami.akamaized.net/wp-content/uploads/sites/31/2021/08/iStock-1267935446.jpg?im=AspectCrop=(16,9);'
   img2 = 'https://material.angular.io/assets/img/examples/shiba2.jpg'
 
+  title = 'Titolo'
   // --Funzione da associare all'event binding (click)--
   logClick(e: any){
     console.log(e)
@@ -30,6 +31,11 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
     // --Facciamo il casting dicendo che il target dell'evento è un elemento di input HTML--
     // --Serve dato che abbiamo dichiarato event: Event quindi non andiamo più a prendere any ma solo un determinato tipo--
     console.log( (<HTMLInputElement>event.target).value)
+  }
+
+  // --Funzione chiamata dal click del pulsante--
+  onClick(event: Event){
+    this.title = 'ho cliccato sul bottone'
   }
 
   constructor() {

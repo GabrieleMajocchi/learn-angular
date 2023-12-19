@@ -43,7 +43,15 @@
 <!-- --Event binding-- -->
 <!-- <button mat-raised-button color="primary" (click)="logClick(this)">Primary</button> -->
 
-<mat-form-field class="example-full-width">
+<!-- <mat-form-field class="example-full-width">
   <mat-label>Favorite food</mat-label>
   <input matInput placeholder="Ex. Pizza" (input)="onInput($event)">
+</mat-form-field> -->
+
+<!-- --2 Ways Binding-- -->
+<button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
+<mat-form-field class="example-full-width">
+  <mat-label>Favorite food</mat-label>
+  <input matInput placeholder="Ex. Pizza" [(ngModel)]="title">
 </mat-form-field>
+<p>{{title}}</p>
