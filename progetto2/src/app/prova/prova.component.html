@@ -89,6 +89,7 @@
   </li>
 </ul> -->
 
+
 <!-- --Esempio ngSwitch-- -->
 <!-- <div [ngSwitch]="numeroSwitch">
   <p *ngSwitchCase="1">uno</p>
@@ -106,10 +107,20 @@
   <p *ngSwitchDefault>default</p>
 </div> -->
 
+
 <!-- --Esempio ngStyle-- -->
-<ul>
+<!-- <ul>
   <li *ngFor="let persona of persone">
     <div class="cerchio" [ngStyle]="{'background': persona.isOnline ? 'green' : 'red'}"></div>
+    <p>{{persona.nome}} {{persona.cognome}}</p>
+  </li>
+</ul> -->
+
+
+<!-- --Esempio ngClass-- -->
+<ul>
+  <li *ngFor="let persona of persone">
+    <div class="cerchio" [ngClass]="{'cerchioOnline' : persona.isOnline, 'cerchioOffline' : !persona.isOnline}"></div>
     <p>{{persona.nome}} {{persona.cognome}}</p>
   </li>
 </ul>

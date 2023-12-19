@@ -15,6 +15,14 @@
   display: inline-block;
 }
 
+.cerchioOnline{
+  background-color: green;
+}
+
+.cerchioOffline{
+  background-color: red;
+}
+
 p{
   display: inline;
   margin-left: 10px;

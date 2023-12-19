@@ -97,4 +97,10 @@
 
 -ngStyle consente di cambiare lo style css di un elemento in base a qualcosa
     [ngStyle]="{'background': persona.isOnline ? 'green' : 'red'}"
+    [ngStyle]="{'background': persona.color}"
 
+-ngClass consente di cambiare la classe css di un elemento in base a qualcosa
+    [ngClass]="{'classe da dare o molteplici, basta separare con lo spazio' : elemento in base al quale dare la classe o meno}"
+    [ngClass]="{'cerchioOnline' : persona.isOnline, 'cerchioOffline' : !persona.isOnline, 'check' : persona.controllo == 'attivo'}"
+    Col ternario si può inserire solo 1 opzione
+    [ngClass]="{'background': persona.isOnline ? 'cerchioOnline' : 'cerchioOffline'}"
