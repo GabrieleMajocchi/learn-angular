@@ -26,9 +26,9 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
   isVisible2 = false
   // --array per ngFor--
   persone = [
-    {nome: "Gino", cognome: "Paoli"},
-    {nome: "Marco", cognome: "Rossi"},
-    {nome: "Maria", cognome: "Neri"},
+    {nome: "Gino", cognome: "Paoli", isOnline: true},
+    {nome: "Marco", cognome: "Rossi", isOnline: false},
+    {nome: "Maria", cognome: "Neri", isOnline: true},
   ]
 
   // --Variabile per ngSwitch--

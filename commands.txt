@@ -95,3 +95,6 @@
 -ngSwitch usato per evitare di scrivere una lista infinita di ngIf
     [ngSwitch]="elemento di riferimento"
 
+-ngStyle consente di cambiare lo style css di un elemento in base a qualcosa
+    [ngStyle]="{'background': persona.isOnline ? 'green' : 'red'}"
+
