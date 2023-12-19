@@ -49,9 +49,13 @@
 </mat-form-field> -->
 
 <!-- --2 Ways Binding-- -->
-<button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
+<!-- <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
 <mat-form-field class="example-full-width">
   <mat-label>Favorite food</mat-label>
   <input matInput placeholder="Ex. Pizza" [(ngModel)]="title">
 </mat-form-field>
-<p>{{title}}</p>
+<p>{{title}}</p> -->
+
+<!-- --Test direttiva *ngIf-- -->
+<p *ngIf="isVisible">Test ngIf 1</p>
+<p *ngIf="isVisible2">Test ngIf 2</p>

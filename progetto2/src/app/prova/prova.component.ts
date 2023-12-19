@@ -21,6 +21,9 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
   img2 = 'https://material.angular.io/assets/img/examples/shiba2.jpg'
 
   title = 'Titolo'
+  // --Variabili per ngIf--
+  isVisible = true
+  isVisible2 = false
   // --Funzione da associare all'event binding (click)--
   logClick(e: any){
     console.log(e)
