@@ -16,6 +16,9 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
   ]
 
   isDisabled = false
+  img = ''
+  img1 = 'https://statickodami.akamaized.net/wp-content/uploads/sites/31/2021/08/iStock-1267935446.jpg?im=AspectCrop=(16,9);'
+  img2 = 'https://material.angular.io/assets/img/examples/shiba2.jpg'
 
   constructor() {
     console.log("costruttore")
@@ -23,8 +26,18 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
   ngOnInit(): void {
     console.log("ngOnInit")
     // --Ogni 2 secondi cambia isDisabled--
+    // --Ogni 2 secondi counter aumenta di 1 e viene eseguito l'if che controlla se il numero è divisibile per 3 o meno
+    // in base al risultato andrà a mostrare img1 o img2--
+    let counter = 0
     setInterval(()=>{
       this.isDisabled = !this.isDisabled
+
+      if(counter%3 == 0){
+        this.img = this.img1
+      }else{
+        this.img = this.img2
+      }
+      counter++
     }, 2000)
   }
   ngDoCheck(): void {
