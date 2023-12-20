@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProvaComponent } from './prova/prova.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HighlightDirective } from './direttive/highlight/highlight.directive';
 // --Angular Material--
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatCardModule} from '@angular/material/card';
@@ -13,7 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
-  declarations: [AppComponent, ProvaComponent],
+  declarations: [AppComponent, ProvaComponent, HighlightDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -146,4 +146,18 @@
         onClick(){
             console.log(this.inputSaluti.nativeElement.value)
         }
-    
+
+-Creare delle Direttive, eseguire il comando da terminale
+    ng generate directive nomeDirettiva          (short ng g d nomeDirettiva)
+    Appena creato col comando avremo due file uno di test e uno normale chiamato nome.directive.ts dentro app
+    Per essere ordinati consiglio di creare una sottocartella direttive->nomeDirettiva ovvero
+        app
+         -direttive
+            -nomeDirettiva
+    Andiamo a fare l'import nell'app.module.ts
+    Andiamo a scrivere nella direttiva cosa vogliamo che faccia
+        constructor(private element: ElementRef) {
+            this.element.nativeElement.style.backgroundColor = 'yellow'
+        }
+    Applichiamo la direttiva ad un elemento di app in questo caso un p
+        <p appHighlight>Ciao sono un paragrafo</p>
