@@ -16,4 +16,8 @@ export class AppComponent {
     {nome: "Marco", cognome: "Rossi", isOnline: false},
     {nome: "Maria", cognome: "Neri", isOnline: true},
   ]
+
+  recivedData(value: string){
+    console.log(value)
+  }
 }

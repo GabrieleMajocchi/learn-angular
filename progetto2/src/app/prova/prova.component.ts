@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnDestroy, OnInit, Input } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnDestroy, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-prova',
@@ -7,6 +7,8 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 })
 export class ProvaComponent implements OnInit, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, DoCheck, OnDestroy{
   @Input() data: any;
+
+  @Output() mandaDatiEvento = new EventEmitter<string>()
 
   cani = [
     {nome: 'roger',
@@ -35,6 +37,13 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
   // --Variabile per ngSwitch--
   numeroSwitch = 3
   testoSwitch = 'due'
+
+  // --Variabile passata con l'emit--
+  nome = 'Gino'
+
+  mandaDati(){
+    this.mandaDatiEvento.emit(this.nome)
+  }
 
   // --Funzione da associare all'event binding (click)--
   logClick(e: any){

@@ -113,3 +113,22 @@
     E inseriamo dentro l'export 
         @Input() data: any;
     Non resta che richiamare i dati ricevuti nel child, in questo caso avremo l'array di oggetti dentro data
+
+-Passaggio di dati dal componente child al parent (emit di Vue)
+    Aggiungiamo l'import al child con 
+        import {Output} from '@angular/core';
+    E inseriamo dentro l'export 
+        @Output() nomeEvento = new EventEmitter()
+        Oppure se vogliamo anche specificare il tipo di dati
+        @Output() nomeEvento = new EventEmitter<string>()
+    Creiamo una funzione che viene richiamata ad esempio con un click nel child e richiamiamo il nostro nomeEvento
+        mandaDati(){
+            this.mandaDatiEvento.emit(this.nome)
+        }
+    Mettiamo in ascolto il parent così che sia in attesa dell'evento
+    Per farlo richiamiamo l'evento del child nel parent dove importiamo il componente nel html
+        <app-prova (mandaDatiEvento)="recivedData($event)"></app-prova>
+    E andiamo a gestire cosa fa con quei dati, in questo caso chiamiamo una funzione che va a console loggarli
+        recivedData(value: string){
+            console.log(value)
+        }
