@@ -154,6 +154,7 @@
         app
          -direttive
             -nomeDirettiva
+    Parte tipica delle direttive è @Directive
     Andiamo a fare l'import nell'app.module.ts
     Andiamo a scrivere nella direttiva cosa vogliamo che faccia
         constructor(private element: ElementRef) {
@@ -179,3 +180,23 @@
     vuole dire che avremo 2 numeri interi e da 1 a 4 decimali
     si possono creare anche custom
     c'è un opzione per far basare il formato della data, currency etc.. in base alla posizione dell'utente
+
+-Service, possono comunicare in maniera trasversale con i componenti e si usano per lasciare ai componenti solo il lato di 
+mostrare i dati e non parti logiche, quelle possiamo svolgerle nei Service
+Il comando per generare un service è
+    ng generate service nomeServizio          (short ng g s nomeServizio)
+    Appena creato col comando avremo due file uno di test e uno normale chiamato nome.services.ts dentro app
+    Per essere ordinati consiglio di creare una sottocartella
+        app
+         -servizi
+    Parte caratteristica dei service è @Injectable
+    e dentro il service si va a indicare dove passarlo con providedIn, nel caso sotto lo passiamo al root quindi a tutta l'app ma
+    potremmo passarlo anche ad un singolo modulo
+        @Injectable({
+            providedIn: 'root'
+        })
+    I service vanno importati anche nei component ad esempio se volessimo importarlo dentro prova
+        import { ServizioProvaService } from '../servizi/servizio-prova.service';
+        e dentro l'export 
+            constructor(private servizioProva: ServizioProvaService) { }
+    Una volta importato potremo accederci facendo in questo caso this.servizioProva.nome variabile o funzione

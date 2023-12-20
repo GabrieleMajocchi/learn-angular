@@ -1,4 +1,5 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnDestroy, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ServizioProvaService } from '../servizi/servizio-prova.service';
 
 @Component({
   selector: 'app-prova',
@@ -9,6 +10,8 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
   @Input() data: any;
 
   @Output() mandaDatiEvento = new EventEmitter<string>()
+
+  constructor(private servizioProva: ServizioProvaService) { }
 
   cani = [
     {nome: 'roger',
@@ -62,11 +65,9 @@ export class ProvaComponent implements OnInit, AfterContentChecked, AfterContent
     this.title = 'ho cliccato sul bottone'
   }
 
-  constructor() {
-    console.log("costruttore")
-  }
   ngOnInit(): void {
     console.log("ngOnInit")
+    console.log(this.servizioProva.testService)
     // --Ogni 2 secondi cambia isDisabled--
     // --Ogni 2 secondi counter aumenta di 1 e viene eseguito l'if che controlla se il numero è divisibile per 3 o meno
     // in base al risultato andrà a mostrare img1 o img2--
