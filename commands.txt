@@ -220,3 +220,9 @@ Il comando per generare un service è
     per creare i collegamenti su elementi del sito possiamo usare routerLink
         <a routerLink="about">About</a>
     
+-Routing con parametri, ovvero se prendiamo una route di prima il link sarà  link/contact/parametri da passare
+    nell'app-routing.module andremo a mettere questo path dove metteremo : il nome del parametro così da creare la nuova rotta
+        {path: 'contact/:id', component: ContactComponent}
+    dentro il componente in questo caso contatti andiamo a mettere nel constructor private route: ActivatedRoute
+    al quale potremo accedere con this.route e in questo caso this.route.snapshot.paramMap.get('id')
+    

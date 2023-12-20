@@ -1,1 +1,11 @@
-<p>contact works!</p>
+<div *ngIf="!isProfile; else profiloContatto">
+  <p>Lista contatti:</p>
+
+  <div *ngFor="let persona of persone; index as i">
+    <a routerLink="/contact/{{i}}"><p>{{persona.nome}} {{persona.cognome}}</p></a>
+  </div>
+</div>
+
+<ng-template #profiloContatto>
+  <p>Profilo di {{persona.nome}} {{persona.cognome}}</p>
+</ng-template>
