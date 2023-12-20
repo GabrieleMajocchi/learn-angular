@@ -12,7 +12,7 @@ export class AppComponent implements AfterViewInit{
   // --Mettiamo ! dopo inputSaluti per garantire che non sia null o undefined altrimenti ElementRef ci darebbe errore--
   @ViewChild('inputValue') inputSaluti!: ElementRef<HTMLInputElement>
 
-  title = 'progetto2';
+  title = 'corso angular';
 
   shareData = [
     {nome: "Gino", cognome: "Paoli", isOnline: true},
@@ -21,6 +21,10 @@ export class AppComponent implements AfterViewInit{
   ]
 
   colore = ''
+
+  numero = 5
+
+  today = Date.now()
 
   // --Dopo la view init andiamo a consol loggare il contenuto di inputSaluti--
   ngAfterViewInit(): void {

@@ -172,3 +172,10 @@
             this.element.nativeElement.style.backgroundColor = colore
         }
     
+-Funzioni Pipe, si inseriscono con | dopo le variabili che vengono chiamate, esempio 
+    <p>Ciao benvenuti al {{title | uppercase}}</p>
+    tra le più comuni uppercase, lowercase, date, number, percent, currency
+    se mettiamo : possiamo specificare ulteriori parametri ad esempio number:'2.1-4'
+    vuole dire che avremo 2 numeri interi e da 1 a 4 decimali
+    si possono creare anche custom
+    c'è un opzione per far basare il formato della data, currency etc.. in base alla posizione dell'utente
