@@ -161,3 +161,14 @@
         }
     Applichiamo la direttiva ad un elemento di app in questo caso un p
         <p appHighlight>Ciao sono un paragrafo</p>
+    Andiamo a creare qualcosa di più dinamico usando un @HostListener per far cambiare colore al passare del mouse
+        @HostListener('mouseenter') onMouseEnter(){
+            this.cambiaColore('yellow')
+        }
+        @HostListener('mouseleave') onMouseLeave(){
+            this.cambiaColore('transparent')
+        }
+        cambiaColore(colore: string){
+            this.element.nativeElement.style.backgroundColor = colore
+        }
+    
