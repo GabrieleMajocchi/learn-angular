@@ -132,3 +132,18 @@
         recivedData(value: string){
             console.log(value)
         }
+
+-Variabili template, sono riferementi ad elementi nell'html che possiamo usare per prendere i dati di quell'elemento
+    Indichiamo la variabile template con # in questo caso #inputValue
+        <input #inputValue value="Ciao">
+    Importiamo ViewChild nel componente
+        import { ViewChild } from '@angular/core';
+    Nell'export andiamo a indicare cosa vogliamo prendere/fare. In questo caso andiamo a prendere inputValue e lo 
+    inseriamo dentro inputSaluti, specifichiamo che non sarà null o undefined con il ! finale e diciamo che ci
+    aspettiamo un ElementRef di tipo HTMLInputElement, così che quando lo useremo dopo ci dia già i suggerimenti
+        @ViewChild('inputValue') inputSaluti!: ElementRef<HTMLInputElement>
+    Fatto questo possiamo richiamare il nostro inputSaluti ad esempio con una funzione (console log della value)
+        onClick(){
+            console.log(this.inputSaluti.nativeElement.value)
+        }
+    

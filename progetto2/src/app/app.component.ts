@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   // --Nome del tag dove importeremo questo componente--
@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
   // --Lo stile del componente--
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit{
+  // --Mettiamo ! dopo inputSaluti per garantire che non sia null o undefined altrimenti ElementRef ci darebbe errore--
+  @ViewChild('inputValue') inputSaluti!: ElementRef<HTMLInputElement>
+
   title = 'progetto2';
 
   shareData = [
@@ -16,6 +19,14 @@ export class AppComponent {
     {nome: "Marco", cognome: "Rossi", isOnline: false},
     {nome: "Maria", cognome: "Neri", isOnline: true},
   ]
+  // --Dopo la view init andiamo a consol loggare il contenuto di inputSaluti--
+  ngAfterViewInit(): void {
+    console.log(this.inputSaluti)
+  }
+  // --Funzione che console logga la value del nativeElement dentro inputSaluti--
+  onClick(){
+    console.log(this.inputSaluti.nativeElement.value)
+  }
 
   recivedData(value: string){
     console.log(value)
