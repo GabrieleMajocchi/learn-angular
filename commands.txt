@@ -200,3 +200,23 @@ Il comando per generare un service è
         e dentro l'export 
             constructor(private servizioProva: ServizioProvaService) { }
     Una volta importato potremo accederci facendo in questo caso this.servizioProva.nome variabile o funzione
+
+-Routing, serve per spostarci da una "pagina" all'altra/da un componente a un altro
+    Se ci servisse creare il file di routing perchè non lo abbiamo possiamo usare il comando
+        ng generate module app-routing --flat --module=app
+    --flat evita la creazione di una cartella specifica per il routing
+    --module=app lo andrà ad importare nel app.module.ts
+    Creiamo una cartella componenti per comodità e creiamo dei nuovi componenti al suo interno con
+        ng g c componenti/about, ng g c componenti/contact, ng g c componenti/home, etc.. 
+    dentro app-routing andiamo a definire i componenti e i loro path
+        const routes: Routes = [
+            {path: '', component: HomeComponent},
+            {path: 'about', component: AboutComponent},
+            {path: 'contact', component: ContactComponent}
+        ];
+    dentro app.module andiamo a chiamare il router con
+        <router-outlet></router-outlet>
+    fatto questo se metteremo nel link /about arriveremo al component about, /contact il component contact e al link base la home
+    per creare i collegamenti su elementi del sito possiamo usare routerLink
+        <a routerLink="about">About</a>
+    
