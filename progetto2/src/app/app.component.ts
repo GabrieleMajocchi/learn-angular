@@ -19,6 +19,9 @@ export class AppComponent implements AfterViewInit{
     {nome: "Marco", cognome: "Rossi", isOnline: false},
     {nome: "Maria", cognome: "Neri", isOnline: true},
   ]
+
+  colore = 'purple'
+
   // --Dopo la view init andiamo a consol loggare il contenuto di inputSaluti--
   ngAfterViewInit(): void {
     console.log(this.inputSaluti)
